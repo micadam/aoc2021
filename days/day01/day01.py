@@ -7,7 +7,7 @@ class Day01(Day):
     def __init__(self):
         super().__init__("01", same_inputs_all=True)
 
-    def increasing_sums(self, f, window_width):
+    def __increasing_sums(self, f: TextIO, window_width: int):
         ans = 0
         prev = 0
         last = Queue()
@@ -25,7 +25,7 @@ class Day01(Day):
         return ans
 
     def part1(self, f: TextIO):
-        return self.increasing_sums(f, 1)
+        return self.__increasing_sums(f, 1)
 
     def part2(self, f: TextIO):
-        return self.increasing_sums(f, 3)
+        return self.__increasing_sums(f, 3)
