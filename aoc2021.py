@@ -1,8 +1,10 @@
 import sys
 from days.day01 import Day01
+from days.day02 import Day02
 
 DAYS = {
-    1: Day01()
+    1: Day01(),
+    2: Day02(),
 }
 
 
@@ -12,7 +14,7 @@ def main():
         raise ValueError("Usage: aoc2021 <day> [test]")
     day = int(sys.argv[1])
     if day not in DAYS:
-        raise ValueError(f"Unknown day :{sys.argv[1]}")
+        raise ValueError(f"Unknown day : {sys.argv[1]}")
     test = (argc > 2 and sys.argv[2].lower() == "test")
     DAYS[day](test=test)
 
