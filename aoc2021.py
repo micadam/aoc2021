@@ -2,11 +2,13 @@ import sys
 from days.day01 import Day01
 from days.day02 import Day02
 from days.day03 import Day03
+from days.day04 import Day04
 
 DAYS = {
     1: Day01(),
     2: Day02(),
     3: Day03(),
+    4: Day04(),
 }
 
 
