@@ -1,5 +1,5 @@
 from typing import TextIO
-
+from timeit import default_timer as timer
 
 class Day:
     def __init__(self, number, same_inputs_all=False,
@@ -29,11 +29,15 @@ class Day:
             in2 = self.in2_test
         print(f"Advent Of Code 2021, day {self.number}")
         with open(in1) as f1:
+            start = timer()
             ans_part1 = self.part1(f1)
-        print(f"Part 1: {ans_part1}")
+            time = timer() - start
+        print(f"Part 1: {ans_part1}, time: {time} s")
         with open(in2) as f2:
+            start = timer()
             ans_part2 = self.part2(f2)
-        print(f"Part 2: {ans_part2}")
+            time = timer() - start
+        print(f"Part 2: {ans_part2}, time: {time} s")
 
     def __call__(self, test):
         self.solve(test)
