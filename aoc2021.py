@@ -14,6 +14,7 @@ from days.day12 import Day12
 from days.day13 import Day13
 from days.day14 import Day14
 from days.day15 import Day15
+from days.day16 import Day16
 
 DAYS = {
     1: Day01(),
@@ -31,6 +32,7 @@ DAYS = {
     13: Day13(),
     14: Day14(),
     15: Day15(),
+    16: Day16(),
 }
 
 
